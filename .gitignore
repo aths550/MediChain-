@@ -1,0 +1,40 @@
+# ─── Private keys & secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+
+# ─── SQLite database ──────────────────────────────────────────────────────────
+backend/medichain.db
+backend/src/db/*.db
+*.db
+*.db-journal
+*.sqlite
+
+# ─── Node ─────────────────────────────────────────────────────────────────────
+node_modules/
+**/node_modules/
+
+# ─── Hardhat ──────────────────────────────────────────────────────────────────
+contracts/cache/
+contracts/artifacts/
+contracts/typechain-types/
+
+# ─── Build outputs ────────────────────────────────────────────────────────────
+frontend/dist/
+backend/dist/
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+.DS_Store
+*.log
+coverage/
+.nyc_output/
+
+# ─── Seed output (contains testnet private keys) ──────────────────────────────
+seed-output.json
+contracts/smoke-result.json
+
+*.db-shm
+*.db-wal
+*.db-journal

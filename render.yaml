@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: medichain-backend
+    env: node
+    region: oregon
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: MST_RPC_URL
+        sync: false
+      - key: QR_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
